@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.chatapp.viewmodel.MyViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="711dp"
+        android:background="@drawable/wallpaper"
+        tools:context=".views.LoginActivity">
+
+        <TextView
+            android:id="@+id/login_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/welcome_to_chatapp"
+            android:textColor="#F9CC03"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.022" />
+
+        <Button
+            android:onClick="@{() -> viewModel.signUpAnonymousUser()}"
+            android:id="@+id/login_btn"
+            android:layout_width="290dp"
+            android:layout_height="55dp"
+            android:backgroundTint="#03F861"
+            android:text="Anonymous SignIn"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login_text"
+            app:layout_constraintVertical_bias="0.889" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
